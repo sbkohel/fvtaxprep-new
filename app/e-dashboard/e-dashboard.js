@@ -11,7 +11,5 @@ angular.module('myApp.e-dashboard', ['ngRoute'])
 .controller('E-dashboardCtrl', ['$scope','loginService',function($scope, loginService ) {
      $scope.logout=function(){
          loginService.logout();
-     }       
-        
-
+     };   
 }]);

@@ -8,22 +8,32 @@ angular.module('myApp.login', ['ngRoute'])
     controller: 'LoginCtrl'
   });
 }])
-.factory('loginService', function($http, $location, sessionService){
+.factory('loginService', function($rootScope, $http, $location, sessionService){
     return {
         login: function(data, $scope){
             var $promise = $http.post('data/user.php', data);
             $promise.then(function(msg){
-                var uid=msg.data;
-                if(uid){  
-                    sessionService.set('uid', uid);
-                    console.log('changing path');
-                    $location.path('/e-dashboard');
-                }    
+                var data=msg.data;
+                if(data){  
+                    sessionService.set('uid', data.uid);
+                    $rootScope.isLoggedIn = true;
+                    if(data.role === 'admin'){
+                        $rootScope.isEmployee = true;
+                        $location.path('/e-dashboard');
+                    }
+                    else{
+                        $rootScope.isCustomer = true;
+                        $location.path('/c-dashboard');
+                    } 
+                        
+                }       
                 else{
                     $scope.msgtxt='Invalid username/password';
+                    $rootScope.isLoggedIn = false;
+                    $rootScope.isCustomer = false;
+                    $rootScope.isEmployee = false;
                     $location.path('/login');
-                } 
-                    
+                }                     
             });
         },
         logout: function(){
@@ -36,10 +46,22 @@ angular.module('myApp.login', ['ngRoute'])
         }
     };
 })
-.controller('LoginCtrl', ['$scope','loginService',function($scope, loginService) {
+.controller('LoginCtrl', ['$scope','$location','loginService',function($scope, $location,loginService) {
         $scope.msgtxt='';
-        $scope.login=function(user){
+        
+        $scope.login=function(user){                  
             loginService.login(user, $scope);
         };
-
+        
+        $scope.isLogged = function(){
+          var connected = loginService.islogged();
+            connected.then(function(msg){
+                var data=msg.data;
+                if (data){
+                    $location.path('/home');
+                }
+            });  
+        };
+        
+        $scope.isLogged();
 }]);

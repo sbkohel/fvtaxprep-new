@@ -14,15 +14,17 @@
   <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
+<body >
     <div class="container">        
-        <ul class="nav nav-pills">
+        <ul class="nav navbar-nav" ng-controller="indexCtrl">
             <li class=""><a href="#/home">Home</a></li>
             <li class=""><a href="#/services">Services</a></li>
             <li class=""><a href="#/deductions">Deductions</a></li>
-            <li class="pull-right" ng-show="!loggedin"><a href="#/login">Login</a></li>
-            <li class="pull-right" ng-show="loggedin"><a href="#/logout">Logout</a></li>
-        </ul>   
+            <li class="" ng-show="isEmployee"><a href="#/e-dashboard">Employee Dashboard</a></li>
+            <li class="" ng-show="isCustomer"><a href="#/c-dashboard">Customer Dashboard</a></li>
+            <li class="pull-right" ng-show="!isLoggedIn"><a href="#/login">Login</a></li>
+            <li class="pull-right" ng-hide="!isLoggedIn" ng-click="logout()"><a href="">Logout</a></li>
+        </ul>  
         <div ng-view></div>
     </div>    
 
@@ -37,6 +39,7 @@
   <script src="home/home.js"></script>
   <script src="services/services.js"></script>
   <script src="e-dashboard/e-dashboard.js"></script>
+  <script src="c-dashboard/c-dashboard.js"></script>
   <script src="login/login.js"></script>
   <script src="signup/signup.js"></script>
   <script src="deductions/deductions.js"></script>

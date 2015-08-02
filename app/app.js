@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.services',
   'myApp.deductions',
   'myApp.e-dashboard',
+  'myApp.c-dashboard',
   'myApp.login',
   'myApp.signup',
   'myApp.version'
@@ -29,19 +30,33 @@ angular.module('myApp', [
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
 }])
+.controller('indexCtrl', function($rootScope, $scope, loginService){   
+    $rootScope.isLoggedIn = loginService.isLogged;    
+    $rootScope.isCustomer = false;
+    $rootScope.isEmployee = false;
+    
+    $scope.logout=function(){
+        loginService.logout();
+        $rootScope.isLoggedIn = false; 
+        $rootScope.isCustomer = false;
+        $rootScope.isEmployee = false;
+     };
+})
 .run(function($rootScope, $location, loginService){
     
-    var routespermission=['/e-dashboard'];   
+    var routespermission=['/e-dashboard','/c-dashboard'];   
     $rootScope.$on('$routeChangeStart',function(){
-        console.log ('testing route ' + $location.path());
         if (routespermission.indexOf($location.path()) !== -1 ){
             var connected = loginService.islogged();
             connected.then(function(msg){
-                console.log(msg);
+                console.log(msg.data);
                 if (!msg.data)
-                     $location.path('/login');
+                    $location.path('/login');
+                else if ($rootScope.isEmployee)
+                    $location.path('/e-dashboard');
+                else
+                    $location.path('/c-dashboard');
             });
-           
         }
      });
  });
