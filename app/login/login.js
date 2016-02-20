@@ -9,9 +9,13 @@ angular.module('myApp.login', ['ngRoute'])
   });
 }])
 .factory('loginService', function($rootScope, $http, $location, sessionService){
+    var user;
+
     return {
-        login: function(data, $scope){
-            var $promise = $http.post('data/user.php', data);
+        login: function(data, $scope){                        
+            var $promise = $http.post('data/user.php', data);  
+            user = data.mail;          
+            
             $promise.then(function(msg){
                 var data=msg.data;
                 if(data){  
@@ -43,6 +47,9 @@ angular.module('myApp.login', ['ngRoute'])
         islogged: function(){
             var checkSessionServer=$http.post('data/check_session.php');
             return checkSessionServer;            
+        },
+        getUser: function(){
+            return user;
         }
     };
 })
@@ -57,6 +64,7 @@ angular.module('myApp.login', ['ngRoute'])
           var connected = loginService.islogged();
             connected.then(function(msg){
                 var data=msg.data;
+                console.log(data);
                 if (data){
                     $location.path('/home');
                 }

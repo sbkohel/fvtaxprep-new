@@ -30,18 +30,82 @@ angular.module('myApp', [
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
 }])
-.controller('indexCtrl', function($rootScope, $scope, loginService){   
+.service('cview',function(){
+  var home = true;
+  var appt = false;
+  var info = false;
+  var returns = false;
+  var feedback = false;
+
+  return{
+    getHome: function(){
+      return home;
+    },
+    getAppt: function(){
+      return appt;
+      console.log("appt is " + appt);
+    },
+    getInfo: function(){
+      return info;
+    },
+    getReturns: function(){
+      return returns;
+    },
+    getFeedback: function(){
+      return feedback;
+    },
+    setView:function(val){
+      if (val == 'home'){
+        home = true;
+        appt = false;
+        info = false;
+        returns = false;
+        feedback = false;
+      } else if (val == 'appt'){
+        home = false;
+        appt = true;
+        info = false;
+        returns = false;
+        feedback = false;
+      } else if (val == 'info'){
+        home = false;
+        appt = false;
+        info = true;
+        returns = false;
+        feedback = false;
+      } else if (val == 'returns'){
+        home = false;
+        appt = false;
+        info = false;
+        returns = true;
+        feedback = false;
+      } else if (val == 'feedback'){
+        home = false;
+        appt = false;
+        info = false;
+        returns = false;
+        feedback = true;
+      }
+    }
+  };
+})
+.controller('indexCtrl', ['$rootScope', '$scope', 'loginService','cview', function($rootScope, $scope, loginService, cview){   
+    
     $rootScope.isLoggedIn = loginService.isLogged;    
     $rootScope.isCustomer = false;
     $rootScope.isEmployee = false;
     
+    $scope.setView = function(val){
+      cview.setView(val);
+    }
+
     $scope.logout=function(){
         loginService.logout();
         $rootScope.isLoggedIn = false; 
         $rootScope.isCustomer = false;
         $rootScope.isEmployee = false;
      };
-})
+}])
 .run(function($rootScope, $location, loginService){
     
     var routespermission=['/e-dashboard','/c-dashboard'];   

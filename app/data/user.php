@@ -15,7 +15,7 @@
         break;
     } 
     
-    if($user->mail == $email && $user->password==$pcheck){
+    if($user->mail == $email && password_verify($user->password, $pcheck)){
        session_start();
        $_SESSION['uid'] = uniqid('ang_'); 
        $array["uid"]= $_SESSION['uid'];

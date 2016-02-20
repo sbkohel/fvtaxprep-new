@@ -1,3 +1,130 @@
 <div class="row">
-    <h1>Customer Dashboard</h1>   
+	<div class="panel panel-primary customer">
+  		<div class="panel-heading">
+    		<div class="panel-title text-center title-font">Customer Dashboard</div>
+  		</div>
+  		<div class="panel-body"> 
+  			<div class="row"  ng-show="getHome()">
+	  			<div class="panel panel-primary frame">
+	  				<div class="panel-heading"> 
+			    		<div class="panel-title"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"> News</span></div>
+			  		</div>
+	  				<div class="panel-body text-center">
+	  					<h4>{{message}}</h4>
+	  				</div>
+	  			</div>
+  			 	<div class="row">
+	  				<div class="col-lg-4">
+	  					<div class="panel panel-primary frame" >
+	  						<div class="panel-heading"> 
+			    				<div class="panel-title"><span class="glyphicon glyphicon-calendar" aria-hidden="true"> Appointments</span></div>
+			  				</div>
+	  						<div class="panel-body text-center">
+	  							No appointments scheduled
+	  						</div>
+	  					</div>
+	  				</div>
+	  			</div>	  						
+	  		</div>
+  			<div class="row" ng-show="getAppt()">
+    			<div class="calendar col-lg-8" ui-calendar="uiConfig.calendar" ng-model="eventSources" ng-init="shown()" ></div> 			
+    		</div>   
+    		<div class="row" ng-show="getInfo()">
+    			<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+  				<form id="signupform" class="form-horizontal" role="form" name="signupform">                
+	                <div class="form-group">
+	                    <label for="firstname" class="col-md-4 control-label">
+	                    	First Name
+	                    </label>
+	                    <div class="col-md-8">
+	                        <input type="text" class="form-control" ng-model="person.F_NAME" placeholder="First Name">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-md-4 control-label">
+	                        Last Name
+	                    </label>
+	                    <div class="col-md-8">
+	                        <input type="text" class="form-control" ng-model="person.L_NAME" placeholder="Last Name">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-md-4 control-label">
+	                        Street Address
+	                    </label>
+	                    <div class="col-md-8">
+	                        <input type="text" class="form-control" ng-model="person.STREET_ADDRESS" placeholder="Street Address">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-md-4 control-label">
+	                        City
+	                    </label>
+	                    <div class="col-md-8">
+	                        <input type="text" class="form-control" ng-model="person.CITY" placeholder="City">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-md-4 control-label">
+	                        State
+	                    </label>
+	                    <div class="col-md-8">
+	                        <input type="text" class="form-control" ng-model="person.STATE" placeholder="State">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-md-4 control-label">
+	                        Zipcode
+	                    </label>
+	                    <div class="col-md-8">
+	                        <input type="text" class="form-control" ng-model="person.ZIPCODE" placeholder="Zipcode">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-md-4 control-label">
+	                        Home Number
+	                    </label>
+	                    <div class="col-md-8">
+	                        <input type="text" class="form-control" ng-model="person.PHONE_NUMBER" placeholder="Home Number">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-md-4 control-label">
+	                        Cell Number
+	                    </label>
+	                    <div class="col-md-8">
+	                        <input type="text" class="form-control" ng-model="person.CELL_NUMBER" placeholder="Cell Number">
+	                    </div>
+	                </div>	                
+	                <div class="form-group">
+	                    <div class="col-md-offset-4 col-md-3">
+	                        <button id="btn-signup" type="button" class="btn btn-success" ng-click="submit(person)">
+	                            <i class="glyphicon glyphicon-ok"></i>
+	                        </button>
+	                    </div>
+	                    <div class="col-md-3">
+	                        <button id="btn-cancel" type="button" class="btn btn-danger">
+	                            <i class="glyphicon glyphicon-remove"></i>
+	                        </button>
+	                    </div>
+	                </div> 
+	            </form>
+	            </div>
+  			</div>
+  			<div class="row" ng-show="getReturns()">
+  				<h3 class="title">This feature has not yet been implemented</h3>		
+  			</div>
+  			<div class="row" ng-show="getFeedback()">
+  				<div class="form-group frame">
+				  	<label for="comment">Comment:</label>
+				  	<textarea class="form-control" rows="5" id="comment" ng-model="comment"></textarea>
+				</div>
+				<div class="col-md-offset-4 col-md-3">
+					<button id="btn-signup" type="button" class="btn btn-success" ng-click="submitFeedback(comment)">
+	                      <i class="glyphicon glyphicon-ok"></i>
+	                </button>
+	            </div>
+  			</div> 		
+  		</div>
+	</div>       
 </div>
