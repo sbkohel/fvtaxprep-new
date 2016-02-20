@@ -1,32 +1,40 @@
-.mainbox, .deduct, .hours, .deduction, .nav,.jumbotron {
+.mainbox, .deduct, .customer, .nav,.jumbotron, .space {
 	margin-top: 50px;
 }
 .hours{
 	font-size: 20px;
 }
+.hours-title{
+    padding-left: 10px;
+}
 table, td,th{
 	padding-right: 10px;
 	padding-left: 10px;
 }
-.jumbotron, .nav-pills>li.active>a, .deduct, .panel-primary>.panel-heading, .input-group-addon, .btn-primary, .table-striped>tbody>tr:nth-child(odd)>td{
+.nav-pills>li>a:hover, .jumbotron, .panel-primary>.panel-heading, .input-group-addon, .btn-primary, .table-striped>tbody>tr:nth-child(odd)>td{
 	background-color: #228b22;
 }
 .black{
 	color: #000000;
 }
+.white{
+    color: #ffffff;
+}
 .nav-pills>li.active>a:hover{
-	background-color: #000000;
+	background-color: #228b22;
 }
 .title{
 	text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
-.deduct{
+.deduct, .customer{
 	font-weight: bold;
 }
-a, a:hover{
-	color: black;
+.nav-pills>li>a, .nav-pills>li>a:hover{
+	color: #228b22;
 }
-.panel-primary>.panel-heading, .panel-primary{
+.nav-pills>li, .panel-primary>.panel-heading, .panel-primary, .btn-primary{
 	border-color: #228b22;
 }
 fieldset { 
@@ -43,7 +51,6 @@ fieldset {
 }
 .text-right{
     float:right; 
-    font-size: 80%; 
     position: relative; 
     top:-10px
 }
@@ -64,4 +71,41 @@ fieldset {
 .errortxt{
     color: red;
     font-weight: bold;
+}
+.nav-pills>li{
+    border-radius: 15px;
+    border-width: 2px;
+    border-color: #228b22;
+    border-style: solid;
+    margin: 5px;
+ }
+ .nav-pills>li>a:hover, .nav-pills>li>a:focus{
+    border-radius: 11px;
+    background-color: #228b22;
+    color: #ffffff;
+}
+.container .jumbotron, .deduct, .panel-primary{
+    border-radius: 28px;
+}
+.panel-heading{
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.title-font{
+    font-size: 24px;
+}
+.red-asterisk{
+    color: red;
+    font-size: 8px;
+}
+.blue-asterisk{
+    color: blue;
+    font-size: 8px;
+}
+.blue-info{
+    color:blue;
+    text-decoration:none;
+}
+.frame{
+    margin: 10px;
 }

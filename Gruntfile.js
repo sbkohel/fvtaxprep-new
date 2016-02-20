@@ -13,6 +13,15 @@ module.exports = function(grunt) {
     watch: {
       files: ['<%= jshint.files %>'],
       tasks: ['jshint']
+    },
+    'http-server': {
+ 
+        'dev': {
+            path: '/home/kohels/Dev/fvtaxprep-new/app',
+            options: {
+			port: 9000
+		}
+        }
     }
   });
 
@@ -20,5 +29,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['jshint']);
-
+  grunt.loadNpmTasks('grunt-http-server');
 };

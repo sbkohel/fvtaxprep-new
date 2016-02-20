@@ -1,0 +1,460 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.25
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/home/sterling/Dev/fvtaxprep-new',
+5 verbose install   [ 'bower',
+5 verbose install     'grunt',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'http-server',
+5 verbose install     'karma',
+5 verbose install     'karma-junit-reporter',
+5 verbose install     'protractor',
+5 verbose install     'shelljs' ] ]
+6 info preinstall angular-seed@0.0.0
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping grunt-contrib-jshint@^0.11.3 /home/sterling/Dev/fvtaxprep-new
+9 verbose cache add [ 'bower@^1.3.1', null ]
+10 verbose cache add name=undefined spec="bower@^1.3.1" args=["bower@^1.3.1",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'bower@^1.3.1',
+11 verbose parsed url   path: 'bower@^1.3.1',
+11 verbose parsed url   href: 'bower@^1.3.1' }
+12 verbose already installed skipping grunt@~0.4.5 /home/sterling/Dev/fvtaxprep-new
+13 verbose already installed skipping grunt-contrib-watch@^0.6.1 /home/sterling/Dev/fvtaxprep-new
+14 verbose cache add name="bower" spec="^1.3.1" args=["bower","^1.3.1"]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: '^1.3.1',
+15 verbose parsed url   path: '^1.3.1',
+15 verbose parsed url   href: '^1.3.1' }
+16 verbose addNamed [ 'bower', '^1.3.1' ]
+17 verbose addNamed [ null, '>=1.3.1-0 <2.0.0-0' ]
+18 verbose cache add [ 'http-server@^0.6.1', null ]
+19 verbose cache add name=undefined spec="http-server@^0.6.1" args=["http-server@^0.6.1",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'http-server@^0.6.1',
+20 verbose parsed url   path: 'http-server@^0.6.1',
+20 verbose parsed url   href: 'http-server@^0.6.1' }
+21 verbose cache add [ 'karma@~0.10', null ]
+22 verbose cache add name=undefined spec="karma@~0.10" args=["karma@~0.10",null]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: 'karma@~0.10',
+23 verbose parsed url   path: 'karma@~0.10',
+23 verbose parsed url   href: 'karma@~0.10' }
+24 silly lockFile 7c83895e-bower-1-3-1 bower@^1.3.1
+25 verbose lock bower@^1.3.1 /home/sterling/.npm/7c83895e-bower-1-3-1.lock
+26 verbose cache add name="http-server" spec="^0.6.1" args=["http-server","^0.6.1"]
+27 verbose parsed url { protocol: null,
+27 verbose parsed url   slashes: null,
+27 verbose parsed url   auth: null,
+27 verbose parsed url   host: null,
+27 verbose parsed url   port: null,
+27 verbose parsed url   hostname: null,
+27 verbose parsed url   hash: null,
+27 verbose parsed url   search: null,
+27 verbose parsed url   query: null,
+27 verbose parsed url   pathname: '^0.6.1',
+27 verbose parsed url   path: '^0.6.1',
+27 verbose parsed url   href: '^0.6.1' }
+28 verbose addNamed [ 'http-server', '^0.6.1' ]
+29 verbose addNamed [ null, '>=0.6.1-0 <0.7.0-0' ]
+30 silly lockFile e7eeaefd-http-server-0-6-1 http-server@^0.6.1
+31 verbose lock http-server@^0.6.1 /home/sterling/.npm/e7eeaefd-http-server-0-6-1.lock
+32 verbose cache add [ 'karma-junit-reporter@^0.2.2', null ]
+33 verbose cache add name=undefined spec="karma-junit-reporter@^0.2.2" args=["karma-junit-reporter@^0.2.2",null]
+34 verbose parsed url { protocol: null,
+34 verbose parsed url   slashes: null,
+34 verbose parsed url   auth: null,
+34 verbose parsed url   host: null,
+34 verbose parsed url   port: null,
+34 verbose parsed url   hostname: null,
+34 verbose parsed url   hash: null,
+34 verbose parsed url   search: null,
+34 verbose parsed url   query: null,
+34 verbose parsed url   pathname: 'karma-junit-reporter@^0.2.2',
+34 verbose parsed url   path: 'karma-junit-reporter@^0.2.2',
+34 verbose parsed url   href: 'karma-junit-reporter@^0.2.2' }
+35 verbose cache add [ 'protractor@^1.1.1', null ]
+36 verbose cache add name=undefined spec="protractor@^1.1.1" args=["protractor@^1.1.1",null]
+37 verbose parsed url { protocol: null,
+37 verbose parsed url   slashes: null,
+37 verbose parsed url   auth: null,
+37 verbose parsed url   host: null,
+37 verbose parsed url   port: null,
+37 verbose parsed url   hostname: null,
+37 verbose parsed url   hash: null,
+37 verbose parsed url   search: null,
+37 verbose parsed url   query: null,
+37 verbose parsed url   pathname: 'protractor@^1.1.1',
+37 verbose parsed url   path: 'protractor@^1.1.1',
+37 verbose parsed url   href: 'protractor@^1.1.1' }
+38 verbose cache add name="karma" spec="~0.10" args=["karma","~0.10"]
+39 verbose parsed url { protocol: null,
+39 verbose parsed url   slashes: null,
+39 verbose parsed url   auth: null,
+39 verbose parsed url   host: null,
+39 verbose parsed url   port: null,
+39 verbose parsed url   hostname: null,
+39 verbose parsed url   hash: null,
+39 verbose parsed url   search: null,
+39 verbose parsed url   query: null,
+39 verbose parsed url   pathname: '~0.10',
+39 verbose parsed url   path: '~0.10',
+39 verbose parsed url   href: '~0.10' }
+40 verbose addNamed [ 'karma', '~0.10' ]
+41 verbose addNamed [ null, '>=0.10.0-0 <0.11.0-0' ]
+42 silly lockFile 059b5650-karma-0-10 karma@~0.10
+43 verbose lock karma@~0.10 /home/sterling/.npm/059b5650-karma-0-10.lock
+44 verbose cache add name="karma-junit-reporter" spec="^0.2.2" args=["karma-junit-reporter","^0.2.2"]
+45 verbose parsed url { protocol: null,
+45 verbose parsed url   slashes: null,
+45 verbose parsed url   auth: null,
+45 verbose parsed url   host: null,
+45 verbose parsed url   port: null,
+45 verbose parsed url   hostname: null,
+45 verbose parsed url   hash: null,
+45 verbose parsed url   search: null,
+45 verbose parsed url   query: null,
+45 verbose parsed url   pathname: '^0.2.2',
+45 verbose parsed url   path: '^0.2.2',
+45 verbose parsed url   href: '^0.2.2' }
+46 verbose addNamed [ 'karma-junit-reporter', '^0.2.2' ]
+47 verbose addNamed [ null, '>=0.2.2-0 <0.3.0-0' ]
+48 silly lockFile 6934e75d-karma-junit-reporter-0-2-2 karma-junit-reporter@^0.2.2
+49 verbose lock karma-junit-reporter@^0.2.2 /home/sterling/.npm/6934e75d-karma-junit-reporter-0-2-2.lock
+50 verbose cache add [ 'shelljs@^0.2.6', null ]
+51 verbose cache add name=undefined spec="shelljs@^0.2.6" args=["shelljs@^0.2.6",null]
+52 verbose parsed url { protocol: null,
+52 verbose parsed url   slashes: null,
+52 verbose parsed url   auth: null,
+52 verbose parsed url   host: null,
+52 verbose parsed url   port: null,
+52 verbose parsed url   hostname: null,
+52 verbose parsed url   hash: null,
+52 verbose parsed url   search: null,
+52 verbose parsed url   query: null,
+52 verbose parsed url   pathname: 'shelljs@^0.2.6',
+52 verbose parsed url   path: 'shelljs@^0.2.6',
+52 verbose parsed url   href: 'shelljs@^0.2.6' }
+53 verbose cache add name="protractor" spec="^1.1.1" args=["protractor","^1.1.1"]
+54 verbose parsed url { protocol: null,
+54 verbose parsed url   slashes: null,
+54 verbose parsed url   auth: null,
+54 verbose parsed url   host: null,
+54 verbose parsed url   port: null,
+54 verbose parsed url   hostname: null,
+54 verbose parsed url   hash: null,
+54 verbose parsed url   search: null,
+54 verbose parsed url   query: null,
+54 verbose parsed url   pathname: '^1.1.1',
+54 verbose parsed url   path: '^1.1.1',
+54 verbose parsed url   href: '^1.1.1' }
+55 verbose addNamed [ 'protractor', '^1.1.1' ]
+56 verbose addNamed [ null, '>=1.1.1-0 <2.0.0-0' ]
+57 silly lockFile 345c784a-protractor-1-1-1 protractor@^1.1.1
+58 verbose lock protractor@^1.1.1 /home/sterling/.npm/345c784a-protractor-1-1-1.lock
+59 silly addNameRange { name: 'bower', range: '>=1.3.1-0 <2.0.0-0', hasData: false }
+60 silly addNameRange { name: 'http-server',
+60 silly addNameRange   range: '>=0.6.1-0 <0.7.0-0',
+60 silly addNameRange   hasData: false }
+61 verbose cache add name="shelljs" spec="^0.2.6" args=["shelljs","^0.2.6"]
+62 verbose parsed url { protocol: null,
+62 verbose parsed url   slashes: null,
+62 verbose parsed url   auth: null,
+62 verbose parsed url   host: null,
+62 verbose parsed url   port: null,
+62 verbose parsed url   hostname: null,
+62 verbose parsed url   hash: null,
+62 verbose parsed url   search: null,
+62 verbose parsed url   query: null,
+62 verbose parsed url   pathname: '^0.2.6',
+62 verbose parsed url   path: '^0.2.6',
+62 verbose parsed url   href: '^0.2.6' }
+63 verbose addNamed [ 'shelljs', '^0.2.6' ]
+64 verbose addNamed [ null, '>=0.2.6-0 <0.3.0-0' ]
+65 silly lockFile cdaabbbd-shelljs-0-2-6 shelljs@^0.2.6
+66 verbose lock shelljs@^0.2.6 /home/sterling/.npm/cdaabbbd-shelljs-0-2-6.lock
+67 silly addNameRange { name: 'karma', range: '>=0.10.0-0 <0.11.0-0', hasData: false }
+68 silly addNameRange { name: 'karma-junit-reporter',
+68 silly addNameRange   range: '>=0.2.2-0 <0.3.0-0',
+68 silly addNameRange   hasData: false }
+69 verbose request where is /karma
+70 verbose request registry https://registry.npmjs.org/
+71 verbose request id 66aee559f9e18310
+72 verbose url raw /karma
+73 verbose url resolving [ 'https://registry.npmjs.org/', './karma' ]
+74 verbose url resolved https://registry.npmjs.org/karma
+75 verbose request where is https://registry.npmjs.org/karma
+76 info trying registry request attempt 1 at 20:24:58
+77 http GET https://registry.npmjs.org/karma
+78 silly addNameRange { name: 'protractor',
+78 silly addNameRange   range: '>=1.1.1-0 <2.0.0-0',
+78 silly addNameRange   hasData: false }
+79 verbose request where is /karma-junit-reporter
+80 verbose request registry https://registry.npmjs.org/
+81 verbose url raw /karma-junit-reporter
+82 verbose url resolving [ 'https://registry.npmjs.org/', './karma-junit-reporter' ]
+83 verbose url resolved https://registry.npmjs.org/karma-junit-reporter
+84 verbose request where is https://registry.npmjs.org/karma-junit-reporter
+85 info trying registry request attempt 1 at 20:24:58
+86 http GET https://registry.npmjs.org/karma-junit-reporter
+87 silly addNameRange { name: 'shelljs', range: '>=0.2.6-0 <0.3.0-0', hasData: false }
+88 verbose request where is /protractor
+89 verbose request registry https://registry.npmjs.org/
+90 verbose url raw /protractor
+91 verbose url resolving [ 'https://registry.npmjs.org/', './protractor' ]
+92 verbose url resolved https://registry.npmjs.org/protractor
+93 verbose request where is https://registry.npmjs.org/protractor
+94 info trying registry request attempt 1 at 20:24:58
+95 http GET https://registry.npmjs.org/protractor
+96 verbose request where is /bower
+97 verbose request registry https://registry.npmjs.org/
+98 verbose url raw /bower
+99 verbose url resolving [ 'https://registry.npmjs.org/', './bower' ]
+100 verbose url resolved https://registry.npmjs.org/bower
+101 verbose request where is https://registry.npmjs.org/bower
+102 info trying registry request attempt 1 at 20:24:58
+103 verbose etag "6H318TYNZVM0X8MO86A81RWJP"
+104 http GET https://registry.npmjs.org/bower
+105 verbose request where is /http-server
+106 verbose request registry https://registry.npmjs.org/
+107 verbose url raw /http-server
+108 verbose url resolving [ 'https://registry.npmjs.org/', './http-server' ]
+109 verbose url resolved https://registry.npmjs.org/http-server
+110 verbose request where is https://registry.npmjs.org/http-server
+111 info trying registry request attempt 1 at 20:24:58
+112 verbose etag "44A9L74D6Z82EVOI7LPX3F3XJ"
+113 http GET https://registry.npmjs.org/http-server
+114 verbose request where is /shelljs
+115 verbose request registry https://registry.npmjs.org/
+116 verbose url raw /shelljs
+117 verbose url resolving [ 'https://registry.npmjs.org/', './shelljs' ]
+118 verbose url resolved https://registry.npmjs.org/shelljs
+119 verbose request where is https://registry.npmjs.org/shelljs
+120 info trying registry request attempt 1 at 20:24:58
+121 verbose etag "5USIFTRGMBEN9EQQO06N5RV1S"
+122 http GET https://registry.npmjs.org/shelljs
+123 http 304 https://registry.npmjs.org/bower
+124 silly registry.get cb [ 304,
+124 silly registry.get   { date: 'Sun, 13 Dec 2015 02:24:58 GMT',
+124 silly registry.get     via: '1.1 varnish',
+124 silly registry.get     'cache-control': 'max-age=300',
+124 silly registry.get     etag: '"6H318TYNZVM0X8MO86A81RWJP"',
+124 silly registry.get     age: '173',
+124 silly registry.get     connection: 'keep-alive',
+124 silly registry.get     'x-served-by': 'cache-ord1729-ORD',
+124 silly registry.get     'x-cache': 'HIT',
+124 silly registry.get     'x-cache-hits': '1',
+124 silly registry.get     'x-timer': 'S1449973498.437734,VS0,VE0',
+124 silly registry.get     vary: 'Accept' } ]
+125 verbose etag https://registry.npmjs.org/bower from cache
+126 silly addNameRange number 2 { name: 'bower', range: '>=1.3.1-0 <2.0.0-0', hasData: true }
+127 silly addNameRange versions [ 'bower',
+127 silly addNameRange   [ '0.1.0',
+127 silly addNameRange     '0.1.2',
+127 silly addNameRange     '0.1.3',
+127 silly addNameRange     '0.2.0',
+127 silly addNameRange     '0.3.0',
+127 silly addNameRange     '0.3.1',
+127 silly addNameRange     '0.3.2',
+127 silly addNameRange     '0.4.0',
+127 silly addNameRange     '0.5.0',
+127 silly addNameRange     '0.5.1',
+127 silly addNameRange     '0.6.0',
+127 silly addNameRange     '0.6.1',
+127 silly addNameRange     '0.6.2',
+127 silly addNameRange     '0.6.3',
+127 silly addNameRange     '0.6.4',
+127 silly addNameRange     '0.6.5',
+127 silly addNameRange     '0.6.6',
+127 silly addNameRange     '0.6.7',
+127 silly addNameRange     '0.6.8',
+127 silly addNameRange     '0.7.0',
+127 silly addNameRange     '0.7.1',
+127 silly addNameRange     '0.8.0',
+127 silly addNameRange     '0.8.1',
+127 silly addNameRange     '0.8.2',
+127 silly addNameRange     '0.8.3',
+127 silly addNameRange     '0.8.4',
+127 silly addNameRange     '0.8.5',
+127 silly addNameRange     '0.8.6',
+127 silly addNameRange     '0.9.0',
+127 silly addNameRange     '0.9.1',
+127 silly addNameRange     '0.9.2',
+127 silly addNameRange     '0.10.0',
+127 silly addNameRange     '1.0.0',
+127 silly addNameRange     '1.0.1',
+127 silly addNameRange     '1.0.2',
+127 silly addNameRange     '1.0.3',
+127 silly addNameRange     '1.1.0',
+127 silly addNameRange     '1.1.1',
+127 silly addNameRange     '1.1.2',
+127 silly addNameRange     '1.2.0',
+127 silly addNameRange     '1.2.1',
+127 silly addNameRange     '1.2.2',
+127 silly addNameRange     '1.2.3',
+127 silly addNameRange     '1.2.4',
+127 silly addNameRange     '1.2.5',
+127 silly addNameRange     '1.2.6',
+127 silly addNameRange     '1.2.7',
+127 silly addNameRange     '1.2.8',
+127 silly addNameRange     '1.3.0',
+127 silly addNameRange     '1.3.1',
+127 silly addNameRange     '1.3.2',
+127 silly addNameRange     '1.3.3',
+127 silly addNameRange     '1.3.4',
+127 silly addNameRange     '1.3.5',
+127 silly addNameRange     '1.3.6',
+127 silly addNameRange     '1.3.7',
+127 silly addNameRange     '1.3.8',
+127 silly addNameRange     '1.3.9',
+127 silly addNameRange     '1.3.10',
+127 silly addNameRange     '1.3.11',
+127 silly addNameRange     '1.3.12',
+127 silly addNameRange     '1.4.0',
+127 silly addNameRange     '1.4.1',
+127 silly addNameRange     '1.5.0',
+127 silly addNameRange     '1.5.1',
+127 silly addNameRange     '1.5.2',
+127 silly addNameRange     '1.5.3',
+127 silly addNameRange     '1.6.2',
+127 silly addNameRange     '1.6.3',
+127 silly addNameRange     '1.6.4',
+127 silly addNameRange     '1.6.5',
+127 silly addNameRange     '1.5.4',
+127 silly addNameRange     '1.4.2',
+127 silly addNameRange     '1.6.6',
+127 silly addNameRange     '1.6.7',
+127 silly addNameRange     '1.6.8',
+127 silly addNameRange     '1.6.9',
+127 silly addNameRange     '1.7.0',
+127 silly addNameRange     '1.7.1' ] ]
+128 verbose addNamed [ 'bower', '1.7.1' ]
+129 verbose addNamed [ '1.7.1', '1.7.1' ]
+130 silly lockFile b7a8e63b-bower-1-7-1 bower@1.7.1
+131 verbose lock bower@1.7.1 /home/sterling/.npm/b7a8e63b-bower-1-7-1.lock
+132 silly lockFile b7a8e63b-bower-1-7-1 bower@1.7.1
+133 silly lockFile b7a8e63b-bower-1-7-1 bower@1.7.1
+134 silly lockFile 7c83895e-bower-1-3-1 bower@^1.3.1
+135 silly lockFile 7c83895e-bower-1-3-1 bower@^1.3.1
+136 http 304 https://registry.npmjs.org/shelljs
+137 silly registry.get cb [ 304,
+137 silly registry.get   { date: 'Sun, 13 Dec 2015 02:24:58 GMT',
+137 silly registry.get     via: '1.1 varnish',
+137 silly registry.get     'cache-control': 'max-age=300',
+137 silly registry.get     etag: '"5USIFTRGMBEN9EQQO06N5RV1S"',
+137 silly registry.get     age: '105',
+137 silly registry.get     connection: 'keep-alive',
+137 silly registry.get     'x-served-by': 'cache-ord1729-ORD',
+137 silly registry.get     'x-cache': 'HIT',
+137 silly registry.get     'x-cache-hits': '1',
+137 silly registry.get     'x-timer': 'S1449973498.467811,VS0,VE0',
+137 silly registry.get     vary: 'Accept' } ]
+138 verbose etag https://registry.npmjs.org/shelljs from cache
+139 silly addNameRange number 2 { name: 'shelljs', range: '>=0.2.6-0 <0.3.0-0', hasData: true }
+140 silly addNameRange versions [ 'shelljs',
+140 silly addNameRange   [ '0.0.1',
+140 silly addNameRange     '0.0.2',
+140 silly addNameRange     '0.0.3',
+140 silly addNameRange     '0.0.4',
+140 silly addNameRange     '0.0.5',
+140 silly addNameRange     '0.0.6',
+140 silly addNameRange     '0.0.7',
+140 silly addNameRange     '0.0.8',
+140 silly addNameRange     '0.0.9',
+140 silly addNameRange     '0.1.0',
+140 silly addNameRange     '0.1.1',
+140 silly addNameRange     '0.1.2',
+140 silly addNameRange     '0.1.3',
+140 silly addNameRange     '0.1.4',
+140 silly addNameRange     '0.2.0',
+140 silly addNameRange     '0.2.1',
+140 silly addNameRange     '0.2.2',
+140 silly addNameRange     '0.2.3',
+140 silly addNameRange     '0.2.4',
+140 silly addNameRange     '0.2.5',
+140 silly addNameRange     '0.2.6',
+140 silly addNameRange     '0.3.0',
+140 silly addNameRange     '0.4.0',
+140 silly addNameRange     '0.5.0',
+140 silly addNameRange     '0.5.1',
+140 silly addNameRange     '0.5.2',
+140 silly addNameRange     '0.5.3',
+140 silly addNameRange     '0.0.1-alpha1',
+140 silly addNameRange     '0.0.2-pre1',
+140 silly addNameRange     '0.0.4-pre1',
+140 silly addNameRange     '0.0.5-pre1',
+140 silly addNameRange     '0.0.5-pre2',
+140 silly addNameRange     '0.0.5-pre3',
+140 silly addNameRange     '0.0.5-pre4',
+140 silly addNameRange     '0.0.6-pre1',
+140 silly addNameRange     '0.0.6-pre2' ] ]
+141 verbose addNamed [ 'shelljs', '0.2.6' ]
+142 verbose addNamed [ '0.2.6', '0.2.6' ]
+143 silly lockFile 542b9617-shelljs-0-2-6 shelljs@0.2.6
+144 verbose lock shelljs@0.2.6 /home/sterling/.npm/542b9617-shelljs-0-2-6.lock
+145 silly lockFile dde8a805-js-org-shelljs-shelljs-0-2-6-tgz https://registry.npmjs.org/shelljs/-/shelljs-0.2.6.tgz
+146 verbose lock https://registry.npmjs.org/shelljs/-/shelljs-0.2.6.tgz /home/sterling/.npm/dde8a805-js-org-shelljs-shelljs-0-2-6-tgz.lock
+147 verbose addRemoteTarball [ 'https://registry.npmjs.org/shelljs/-/shelljs-0.2.6.tgz',
+147 verbose addRemoteTarball   '90492d72ffcc8159976baba62fb0f6884f0c3378' ]
+148 info retry fetch attempt 1 at 20:24:58
+149 verbose fetch to= /tmp/npm-23230-RBJTx7wi/registry.npmjs.org/shelljs/-/shelljs-0.2.6.tgz
+150 http GET https://registry.npmjs.org/shelljs/-/shelljs-0.2.6.tgz
+151 http 200 https://registry.npmjs.org/shelljs/-/shelljs-0.2.6.tgz
+152 silly lockFile dde8a805-js-org-shelljs-shelljs-0-2-6-tgz https://registry.npmjs.org/shelljs/-/shelljs-0.2.6.tgz
+153 silly lockFile dde8a805-js-org-shelljs-shelljs-0-2-6-tgz https://registry.npmjs.org/shelljs/-/shelljs-0.2.6.tgz
+154 silly lockFile 542b9617-shelljs-0-2-6 shelljs@0.2.6
+155 silly lockFile 542b9617-shelljs-0-2-6 shelljs@0.2.6
+156 silly lockFile cdaabbbd-shelljs-0-2-6 shelljs@^0.2.6
+157 silly lockFile cdaabbbd-shelljs-0-2-6 shelljs@^0.2.6
+158 error Error: EACCES, mkdir '/home/sterling/.npm/shelljs/0.2.6'
+158 error  { [Error: EACCES, mkdir '/home/sterling/.npm/shelljs/0.2.6']
+158 error   errno: 3,
+158 error   code: 'EACCES',
+158 error   path: '/home/sterling/.npm/shelljs/0.2.6',
+158 error   parent: 'angular-seed' }
+159 error Please try running this command again as root/Administrator.
+160 error System Linux 4.2.0-19-generic
+161 error command "/usr/bin/nodejs" "/usr/bin/npm" "install"
+162 error cwd /home/sterling/Dev/fvtaxprep-new
+163 error node -v v0.10.25
+164 error npm -v 1.4.21
+165 error path /home/sterling/.npm/shelljs/0.2.6
+166 error code EACCES
+167 error errno 3
+168 error stack Error: EACCES, mkdir '/home/sterling/.npm/shelljs/0.2.6'
+169 verbose exit [ 3, true ]

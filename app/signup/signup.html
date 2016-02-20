@@ -2,85 +2,122 @@
     <div class="panel panel-primary">
         <div class="panel-heading">
             <div class="panel-title">Sign Up</div>
-            <div class="text-right"><a id="signinlink" href="#/login">Sign In</a></div>
+            <div class="text-right"><a id="signinlink" href="#/login"><span class="white">Sign In</span></a></div>
         </div>  
         <div class="panel-body" >
-            <form id="signupform" class="form-horizontal" role="form">
+            <form id="signupform" class="form-horizontal" role="form" name="signupform">
                 
                 <div class="form-group">
-                    <label for="firstname" class="col-md-3 control-label">First Name</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                    <label for="firstname" class="col-md-4 control-label">
+                        <span><i class="glyphicon glyphicon-asterisk red-asterisk"></i> </span>First Name
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="person.firstname" placeholder="First Name">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                    <label for="lastname" class="col-md-4 control-label">
+                        <span><i class="glyphicon glyphicon-asterisk red-asterisk"></i> </span>Last Name
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="person.lastname" placeholder="Last Name">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lastname" class="col-md-3 control-label">Street Address</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="street" placeholder="Street Address">
+                    <label for="lastname" class="col-md-4 control-label">
+                        <span><i class="glyphicon glyphicon-asterisk red-asterisk"></i> </span>Street Address
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="person.street" placeholder="Street Address">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lastname" class="col-md-3 control-label">City</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="city" placeholder="City">
+                    <label for="lastname" class="col-md-4 control-label">
+                        <span><i class="glyphicon glyphicon-asterisk red-asterisk"></i> </span>City
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="person.city" placeholder="City">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lastname" class="col-md-3 control-label">State</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="state" placeholder="State">
+                    <label for="lastname" class="col-md-4 control-label">
+                        <span><i class="glyphicon glyphicon-asterisk red-asterisk"></i> </span>State
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="person.state" placeholder="State">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lastname" class="col-md-3 control-label">Zipcode</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="zipcode" placeholder="Zipcode">
+                    <label for="lastname" class="col-md-4 control-label">
+                        <span><i class="glyphicon glyphicon-asterisk red-asterisk"></i> </span>Zipcode
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="person.zipcode" placeholder="Zipcode">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lastname" class="col-md-3 control-label">Home Number</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="homenumber" placeholder="Home Number">
+                    <label for="lastname" class="col-md-4 control-label">
+                        <span><i class="glyphicon glyphicon-asterisk blue-asterisk"></i> </span>Home Number
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="person.homenumber" placeholder="Home Number">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lastname" class="col-md-3 control-label">Cell Number</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="cellnumber" placeholder="Cell Number">
+                    <label for="lastname" class="col-md-4 control-label">
+                        <span><i class="glyphicon glyphicon-asterisk blue-asterisk"></i> </span>Cell Number
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="person.cellnumber" placeholder="Cell Number">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="col-md-3 control-label">Email</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="email" placeholder="Email Address">
+                    <label for="email" class="col-md-4 control-label">
+                        <span><i class="glyphicon glyphicon-asterisk red-asterisk"></i> </span>Email
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="person.email" placeholder="Email Address">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="password" class="col-md-3 control-label">Password</label>
-                    <div class="col-md-9">
-                        <input type="password" class="form-control" name="passwd" placeholder="Password">
+                    <label for="password" class="col-md-4 control-label">
+                        <span>
+                            <i class="glyphicon glyphicon-info-sign blue-info" no-link"" rel="tooltip" title="{{pwdreq}}"></i>
+                        </span>
+                        <span> <i class="glyphicon glyphicon-asterisk red-asterisk"></i> </span>
+                        Password
+                    </label>
+                    <div class="col-md-8">
+                        <input type="password" class="form-control" ng-model="person.passwd" ng-change="validatepwd(person.passwd)"placeholder="Password" ng-style="{ 'background-color': getColor()}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="password" class="col-md-3 control-label">Password</label>
-                    <div class="col-md-9">
-                        <input type="password" class="form-control" name="passwd2" placeholder="Re-Enter Password">
+                    <label for="password" class="col-md-4 control-label">
+                        <span><i class="glyphicon glyphicon-asterisk red-asterisk"></i> </span>Password
+                    </label>
+                    <div class="col-md-8">
+                        <input type="password" class="form-control" ng-model="person.passwd2" ng-change="validatepwd2()" ng-disabled="!isStrong" placeholder="Re-Enter Password" ng-style="{ 'background-color': getColor2()}">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-4 col-md-3">
-                        <button id="btn-signup" type="button" class="btn btn-success"><i class="glyphicon glyphicon-ok"></i></button>
+                        <button id="btn-signup" type="button" class="btn btn-success" ng-disabled="!formComplete" ng-click="submit(person)">
+                            <i class="glyphicon glyphicon-ok"></i>
+                        </button>
                     </div>
                     <div class="col-md-3">
-                        <button id="btn-cancel" type="button" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
+                        <button id="btn-cancel" type="button" class="btn btn-danger">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>
                     </div>
-                </div>                
+                </div> 
+                <div class="col-md-offset-1 col-md-5">
+                    <span><i class="glyphicon glyphicon-asterisk red-asterisk"></i> Required Field</span>
+                </div>    
+                <div class="col-md-offset-1 col-md-5">
+                    <span><i class="glyphicon glyphicon-asterisk blue-asterisk"></i> One Required</span>
+                </div>
+                </div>               
             </form>
          </div>
     </div>

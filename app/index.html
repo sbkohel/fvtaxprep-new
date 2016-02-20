@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp"> 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fox Valley Tax Prep</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-  <link rel="stylesheet" href="app.css">
-  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
-</head>
-<body >
-    <div class="container">        
-        <ul class="nav navbar-nav" ng-controller="indexCtrl">
-            <li class=""><a href="#/home">Home</a></li>
-            <li class=""><a href="#/services">Services</a></li>
-            <li class=""><a href="#/deductions">Deductions</a></li>
-            <li class="" ng-show="isEmployee"><a href="#/e-dashboard">Employee Dashboard</a></li>
-            <li class="" ng-show="isCustomer"><a href="#/c-dashboard">Customer Dashboard</a></li>
-            <li class="pull-right" ng-show="!isLoggedIn"><a href="#/login">Login</a></li>
-            <li class="pull-right" ng-hide="!isLoggedIn" ng-click="logout()"><a href="">Logout</a></li>
-        </ul>  
-        <div ng-view></div>
-    </div>    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fox Valley Tax Prep</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="app.css">
+        <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css">
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+    </head>
+    <body >
+        <div class="container">    
+            <div class="row">   
+                <ul class="nav nav-pills" ng-controller="indexCtrl" >
+                    <li class="button-border"><a href="#/home">Home</a></li>
+                    <li class=""><a href="#/deductions">Deductions</a></li>
+                    <li class="" ng-show="isEmployee" ng-cloak><a href="#/e-dashboard">Employee Dashboard</a></li>
+                    <li class="dropdown" ng-show="isCustomer" role="presentation">
+                        <a href="#/c-dashboard" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">Customer Dashboard <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#/c-dashboard" ng-click="setView('home')">Customer Home</a></li>
+                            <li><a href="#/c-dashboard" ng-click="setView('appt')">Create Appointment</a></li>
+                            <li><a href="#/c-dashboard" ng-click="setView('info')">Update Personal Information</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#/c-dashboard" ng-click="setView('returns')">View Previous Returns</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#/c-dashboard" ng-click="setView('feedback')">Feedback</a></li>
+                        </ul>
+                    </li>
+                    <li class="pull-right" ng-show="!isLoggedIn"><a href="#/login">Login</a></li>
+                    <li class="pull-right" ng-hide="!isLoggedIn" ng-click="logout()"><a href="">Logout</a></li>
+                </ul> 
+            </div>
+            <div ng-view></div>
+        </div>    
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="home/home.js"></script>
-  <script src="services/services.js"></script>
-  <script src="e-dashboard/e-dashboard.js"></script>
-  <script src="c-dashboard/c-dashboard.js"></script>
-  <script src="login/login.js"></script>
-  <script src="signup/signup.js"></script>
-  <script src="deductions/deductions.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
-</body>
+      <!-- In production use:
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+      -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+        <script src="bower_components/moment/min/moment.min.js"></script>
+        <script src="bower_components/angular-moment/angular-moment.min.js"></script>
+        <script src="bower_components/bootbox/bootbox.js"></script>
+        <script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script type="text/javascript" src="bower_components/fullcalendar/dist/gcal.js"></script>
+        <script src="https://apis.google.com/js/client.js"></script>
+        <script src="app.js"></script>
+        <script src="home/home.js"></script>
+        <script src="services/services.js"></script>
+        <script src="e-dashboard/e-dashboard.js"></script>
+        <script src="c-dashboard/c-dashboard.js"></script>
+        <script src="login/login.js"></script>
+        <script src="signup/signup.js"></script>
+        <script src="deductions/deductions.js"></script>
+        <script src="components/version/version.js"></script>
+        <script src="components/version/version-directive.js"></script>
+        <script src="components/version/interpolate-filter.js"></script>
+    </body>
 </html>
